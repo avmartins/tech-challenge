@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="76x76"
+	href="../../../static/novo/assets/img/apple-icon.png">
+<link rel="icon" type="image/png"
+	href="../../../static/novo/assets/img/favicon.png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>HEALTH CARE PIXEON</title>
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+	name='viewport' />
+<!--     Fonts and icons     -->
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
+	rel="stylesheet" />
+<!-- CSS Files -->
+<link href="../../../static/novo/assets/css/all.css" rel="stylesheet" />
+<link href="../../../static/novo/assets/css/bootstrap.min.css"
+	rel="stylesheet" />
+<link
+	href="../../../static/novo/assets/css/now-ui-dashboard.css?v=1.3.0"
+	rel="stylesheet" />
+<!-- CSS Just for demo purpose, don't include it in your project -->
+<script type="text/javascript" th:inline="javascript">
+        /*<![CDATA[*/
+        var theListLabel = [[${label}]];
+        var theListPoint = [[${point}]];
+        var theListRend  = [[${rend}]];
+        console.log(theListLabel);
+        console.log(theListPoint);
+        console.log(theListRend);
+        /*]]>*/
+    </script>
+<link href="../../../static/novo/assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+	<div class="wrapper ">
+
+		<!-- Sidebar -->
+		<div th:replace="fragments/sidebar2 :: sidebar2"></div>
+		<!-- Sidebar end -->
+
+		<div class="main-panel" id="main-panel">
+
+			<!-- Navbar -->
+			<div th:replace="fragments/navbar :: navbar"></div>
+			<!-- Navbar end -->
+
+			<div class=" inv panel-header panel-header-lg">				
+			</div>					
+			
+			<div class="admin panel-header panel-header-lg">				
+			</div>
+			<div class="content">
+				<div class="row">
+					<div class="col-md-12">
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					
+				</div>
+			</footer>
+		</div>
+	</div>
+	<!--   Core JS Files   -->
+	<script src="../../../static/novo/assets/js/core/jquery.min.js"></script>
+	<script src="../../../static/novo/assets/js/core/popper.min.js"></script>
+	<script src="../../../static/novo/assets/js/core/bootstrap.min.js"></script>
+	<script
+		src="../../../static/novo/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+	<!-- Chart JS -->
+	<script src="../../../static/novo/assets/js/plugins/chartjs.min.js"></script>
+	<!--  Notifications Plugin    -->
+	<script
+		src="../../../static/novo/assets/js/plugins/bootstrap-notify.js"></script>
+	<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+	<script
+		src="../../../static/novo/assets/js/now-ui-dashboard.min.js?v=1.3.0"
+		type="text/javascript"></script>
+	<!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+
+	<script src="../../../static/novo/assets/demo/demo.js"></script>
+	<script>
+    $(document).ready(function () {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+    });
+</script>
+</body>
+
+</html>

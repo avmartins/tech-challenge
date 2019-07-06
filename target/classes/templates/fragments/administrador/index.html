@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:replace="fragments/imports/index :: header"></div>
+</head>
+
+<body>
+<!-- Pre-loader start -->
+<div th:replace="fragments/pre-loader :: pre-loader"></div>
+<!-- Pre-loader end -->
+
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+
+        <!-- Menu Superior -->
+        <div th:replace="fragments/topbar :: topbar"></div>
+        <!-- Fim do Menu Superior -->
+
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+
+                <!-- Menu Lateral -->
+                <div th:replace="fragments/sidebar2 :: sidebar2"></div>
+                <!-- Fim do Menu Lateral -->
+
+                <!-- Main -->
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <div class="page-body">
+                                    <div class="row">
+                                        <!-- Conteúdo Principal -->
+
+                                         <div th:replace="fragments/administrador/dashboard2 :: dashboard2"></div>
+
+                                        <!-- Fim do Conteúdo Principal -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim de Main -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<div th:replace="fragments/imports/index :: scripts"></div>
+<!-- Fim dos Scripts -->
+</body>
+</html>

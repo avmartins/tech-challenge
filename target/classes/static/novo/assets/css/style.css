@@ -1,0 +1,56 @@
+.section-image:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%; 
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.section-image {
+  background: url("../img/bg14.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: 50%;
+}
+.card-login .form-control, .card-login .btn-primary {
+	    border-radius: 1.25rem !important;
+	    color: #fff;
+	    opacity: 
+	    
+}
+.btn-primary{
+	background-color:#2d8db4 !important;
+}
+.btn-primary:hover{
+	background-color:#246f8e!important;
+}
+.card-login .logo-container {
+    width: 120px;
+    margin: 60px auto 0;
+    margin-bottom: 55px;
+}
+.primeiro-div{
+	margin-top: 60px; 
+}
+.card-login .form-control ::placeholder { 
+  color: red !important;
+  opacity: 1; 
+}
+
+.card-login .form-control :-ms-input-placeholder { 
+  color: red;
+}
+
+.card-login .form-control ::-ms-input-placeholder {
+  color: red;
+}

@@ -1,0 +1,126 @@
+<html
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<!-- Menu Lateral -->
+<div data-th-fragment="sidebar">
+
+	<nav class="pcoded-navbar">
+		<div class="pcoded-inner-navbar main-menu">
+
+			<!-- Menu Cliente -->
+			<div sec:authorize="hasAuthority('Cliente')">
+				<div class="pcoded-navigatio-lavel">ÁREA DO INVESTIDOR</div>
+				<ul class="pcoded-item pcoded-left-item">
+					<li class="pcoded-hasmenu active pcoded-trigger">
+					<li class=""><a href="#large-Modal" data-toggle="modal"> <span
+							class="pcoded-micon"><i class="fa fa-heartbeat"></i></span> <span
+							class="pcoded-mtext">Realizar OperaÃ§Ãµes</span>
+					</a></li>
+				</ul>
+			</div>
+
+			<!-- Menu Administrador -->
+			<div sec:authorize="hasAuthority('Administrador')">
+				<div class="pcoded-navigatio-lavel">ÁREA ADMINISTRATIVA</div>
+				<ul class="pcoded-item pcoded-left-item">
+					<li class="pcoded-hasmenu active pcoded-trigger"><a
+						href="javascript:void(0)"> <span class="pcoded-micon"><i
+								class="fa fa-user-plus"></i></span> <span class="pcoded-mtext">Usuários</span>
+					</a>
+						<ul class="pcoded-submenu">
+							<li class="active"><a th:href="@{/users/new}">
+									<span class="pcoded-mtext">Novo Usuário</span>
+							</a></li>
+							<li class="active"><a th:href="@{/users/list}">
+									<span class="pcoded-mtext">Lista de Usuários</span>
+							</a></li>
+						</ul></li>
+					<li><a href="javascript:void(0)"> <span
+							class="pcoded-micon"><i class="fa fa-bank"></i></span> <span
+							class="pcoded-mtext">Financeiro</span>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- Large modal -->
+	<div class="card-block">
+		<div class="modal fade" id="large-Modal" tabindex="-1" role="dialog"
+			style="z-index: 1050; display: none;" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Selecione o UsuÃƒÂ¡rio</h4>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">Ãƒâ€”</span>
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="input-group input-group-button">
+									<input type="text" class="form-control"
+										placeholder="Digite o nome completo ou parte dele...">
+									<span class="input-group-addon btn btn-primary"
+										id="basic-addon10"> <span class="">Procurar</span>
+									</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="card-block table-border-style">
+							<div class="table-responsive">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th width="10%">#</th>
+											<th>Nome</th>
+											<th width="10%">Opção</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Profile</td>
+											<td>
+												<form action="#" th:action="@{/pacientes/profile}">
+													<button class="btn btn-sm btn-primary" type="submit">Selecionar</button>
+												</form>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Register</td>
+											<td>
+												<form action="#" th:action="@{/pacientes/register}">
+													<button class="btn btn-sm btn-primary" type="submit">Selecionar</button>
+												</form>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Larry</td>
+											<td>
+												<form action="#" th:action="@{/pacientes/profile}">
+													<button class="btn btn-sm btn-primary" type="submit">Selecionar</button>
+												</form>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fim do Menu Lateral -->

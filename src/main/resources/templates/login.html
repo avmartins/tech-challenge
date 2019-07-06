@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div data-th-replace="fragments/imports/login :: header"></div>
+</head>
+
+<body class="fix-menu">
+<!-- Pre-loader start -->
+<div th:replace="fragments/pre-loader :: pre-loader"></div>
+<!-- Pre-loader end -->
+<div class="section-image"></div>
+<section class="login-block">
+    <!-- Container-fluid starts -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Authentication card start -->
+                <form class="md-float-material form-material" name="f" th:action="@{/auth/login}" method="post">
+<!--                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>-->
+                    
+                    <div class="col-md-4 ml-auto mr-auto">
+                        <div class="card card-login card-plain">
+                            <div class="card-header">
+                                    <div class="logo-container">
+                                    	<img alt="Login" src="../static/novo/assets/img/logo.png">
+                                    </div>
+                            </div>
+                            
+                            <div align="center" style="font-family:Courier; color:white; font-size: 20px;">
+                                    Pixeon Tech Challenge
+                            </div>
+                            
+                            <div class="input-group no-border form-control-lg">
+                                <input type="text" name="j_username" class="form-control" required=""
+                                       placeholder="Email"/>
+                                <span class=" form-bar"></span>
+                            </div>
+                            <div class="input-group no-border form-control-lg">
+                                <input type="password" name="j_password" class="form-control" required=""
+                                       placeholder="Senha"/>
+                                <span class=" form-bar"></span>
+                            </div>
+                            
+                            <div class="row m-t-30">
+                                <div class="col-md-12">
+                                    <button type="submit"
+                                            class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+                                        Entrar
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div align="center" style="font-family:Courier; color:white; font-size: 12px;">
+                                    usu&aacute;rio : root@email.com / senha : root<br/>
+                                    usu&aacute;rio : user@email.com / senha : user
+                            </div>
+                            
+                            <div align="center" style="font-family:Courier; color:white; font-size: 12px;">
+                            		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                                    candidato : Anderson Virginio Martins
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div th:replace="fragments/imports/login :: scripts"></div>
+</body>
+
+</html>

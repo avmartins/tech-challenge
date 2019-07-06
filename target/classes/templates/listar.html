@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+
+<form name="form" action="#" th:action="@{/user/salvar}"
+      th:object="${user}" method="post">
+
+    <input type="hidden" name="id">
+
+    <h3>Dados</h3>
+    <fieldset>
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <input id="cpf" name="cpf" type="text" class=" form-control"
+                               placeholder="CPF">
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <input id="nome" name="nome" type="text" th:field="*{nome}"
+                               class=" form-control" placeholder="Nome">
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <input id="sobrenome" name="sobrenome" type="text"
+                               th:field="*{sobrenome}" class=" form-control"
+                               placeholder="Sobrenome">
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <input id="email" name="email" type="email" th:field="*{email}"
+                               class=" form-control" placeholder="email">
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <input id="password" name="password" type="password"
+                               th:field="*{password}" class=" form-control"
+                               placeholder="Password">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <button type="submit"
+                class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">
+            Salvar
+        </button>
+    </fieldset>
+
+</form>
+
+
+<br>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>email</th>
+        <th>Password</th>
+        <th>Tipo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="usuario : ${usuarios}">
+        <td><span th:text="${usuario.nome}"> Nome </span></td>
+        <td><span th:text="${usuario.cpf}"> CPF </span></td>
+        <td><span th:text="${usuario.email}"> e-mail </span></td>
+        <td><span th:text="${usuario.password}"> Password </span></td>
+        <td><span th:text="${usuario.userRole}"> Tipo </span></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+
+<table>
+    <thead>
+    <tr>
+        <th>Deposito</th>
+        <th>Resgate</th>
+        <th>Data</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="operacao : ${operacoes}">
+        <td><span th:text="${operacao.valor}"> Author </span></td>
+        <td><span th:text="${operacao.resgate}"> Author </span></td>
+        <td><span th:text="${operacao.dataOperacao}"> Author </span></td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+
+<br>
+<br>
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+    <p th:text="${saldoGeral}"></p>
+</div>
+
+
+</body>
+</html>
